@@ -1,16 +1,29 @@
-print("\nHello! My name is Carmel. Do I have a tale to tell you, but the path of this tale is in your hands.  ")
-print("\nBefore we can continue I need for you to answer a few questions for me.  ")
-print("\nAfter typing your answer be sure to press the enter key.")
-input ("\nPress the enter key to continue...")
+import sys
+import time
+def slowprint(string):
+    for char in range(len(string)):
+        print(string[char], end="")
+        time.sleep(1./35)
+
+
+
+
+
+
+
+slowprint("\nMy name is Carmel. Do I have a tale to tell you, but the path of this tale is in your hands.  ")
+slowprint("\nWe can continue I need for you to answer a few questions for me.  ")
+slowprint("\nAfter typing your answer be sure to press the enter key.")
+slowprint("\nPress the enter key to continue...")
 
 userName = input("\nEnter your name:  ")
 while (len(userName) == 0) :
     userName = input("\nI am sorry you cannot leave this blank.  Please enter your name: ")
 
 if userName.lower() == "niki decker":
-    print("\nMy creator," + userName + ". Pleasure to serve you!")
+    slowprint("\nMy creator," + userName + ". Pleasure to serve you!")
 else:
-    print("\nHello, " + userName +". Nice to meet you!")
+    slowprint("\nHello, " + userName +". Nice to meet you!")
 keepGoing = "y"
 while keepGoing.lower() == "y":
   
@@ -43,18 +56,18 @@ while keepGoing.lower() == "y":
   
 
     if turtleType.lower() == "green sea turtles" : 
-        print("\nLets Go!!!  ")
-        print("\n")
+        slowprint("Are you ready? Let's go!")
+        slowprint("\n")
 
-        print("\nOnce upon a time there was a beautiful " +  str(turtleType) + " named " + str(seaTurtle) + ". ")
-        print("\n " + str(seaTurtle) + " loved to play on the beach.  ")
-        print("\nOne day " + str(seaTurtle) + " was playing on the beach and the time passed by him quickly.  ")
-        print("\n " + str(seaTurtle) + " noticed he was no longer able to see family.  ")
-        print("\nSo " +  str(seaTurtle) + " searched all around the island and the beach. His family was nowhere around.  ")
-        print("\nHe then decides to go search the " + str(oceanName) + " ocean in hopes of finding his family.  ")
-        print("\nAfter searching the " + str(oceanName)+ " ocean for " + str(number) + " days.  ")
-        print("\n " + str(seaTurtle) + " comes across " +  str(islandName) + " Island.  ")
-        print("\nHe wonders if his family could be at " +  str(favoriteBeach) + " beach on " + str(islandName) + " Island.  ")
+        slowprint("\nOnce upon a time there was a beautiful " +  str(turtleType) + " named " + str(seaTurtle) + ". ")
+        slowprint("\n " + str(seaTurtle) + " loved to play on the beach.  ")
+        slowprint("\nOne day " + str(seaTurtle) + " was playing on the beach and the time passed by him quickly.  ")
+        slowprint("\n " + str(seaTurtle) + " noticed he was no longer able to see family.  ")
+        slowprint("\nSo " +  str(seaTurtle) + " searched all around the island and the beach. His family was nowhere around.  ")
+        slowprint("\nHe then decides to go search the " + str(oceanName) + " ocean in hopes of finding his family.  ")
+        slowprint("\nAfter searching the " + str(oceanName)+ " ocean for " + str(number) + " days.  ")
+        slowprint("\n " + str(seaTurtle) + " comes across " +  str(islandName) + " Island.  ")
+        slowprint("\nHe wonders if his family could be at " +  str(favoriteBeach) + " beach on " + str(islandName) + " Island.  ")
 
         checkOutbeach = input("\nShould " + str(seaTurtle)+ " go check the beach for his fmaily?  Type yes or no:")
         while checkOutbeach.lower() != "yes" and checkOutbeach.lower() != "no" :
